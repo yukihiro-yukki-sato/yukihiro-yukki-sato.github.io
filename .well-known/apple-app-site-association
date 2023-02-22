@@ -7,7 +7,16 @@
           "GHM7DCFFQ4.jp.co.fablic.fril.test.inhouse",
           "26CYB762GH.jp.co.fablic.fril.test.inhouse"
         ],
-        "components": []
+        "components": [
+          {
+            "/": "/*",
+            "comment": "test"
+          },
+          {
+            "/": "/app/*",
+            "comment": "test"
+          }
+        ]
       }
     ]
   }

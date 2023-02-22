@@ -8,10 +8,6 @@
           "26CYB762GH.jp.co.fablic.fril.test.inhouse"
         ],
         "components": [
-          {
-            "/": "/app/*",
-            "comment": "test"
-          }
         ]
       }
     ]

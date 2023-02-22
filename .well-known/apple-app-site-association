@@ -9,10 +9,6 @@
         ],
         "components": [
           {
-            "/": "/*",
-            "comment": "test"
-          },
-          {
             "/": "/app/*",
             "comment": "test"
           }

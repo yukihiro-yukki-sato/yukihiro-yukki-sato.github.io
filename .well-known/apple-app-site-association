@@ -3,7 +3,7 @@
     "details": [
       {
         "appIDs": [
-          "GHM7DCFFQ4.jp.co.fablic.fril.test.inhouse"
+          "26CYB762GH.jp.co.fablic.fril.test.inhouse"
         ],
         "components": [
           {
@@ -17,7 +17,7 @@
   },
   "webcredentials": {
     "apps": [
-      "GHM7DCFFQ4.jp.co.fablic.fril.test.inhouse"
+      "26CYB762GH.jp.co.fablic.fril.test.inhouse"
     ]
   }
 }

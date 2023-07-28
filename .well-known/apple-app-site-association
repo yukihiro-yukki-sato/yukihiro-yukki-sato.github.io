@@ -9,7 +9,6 @@
         "components": [
           {
             "/": "/mini_resell/resell",
-            "?": { "hash_id": "*" }
             "comment": "Launch post item from external belonging list"
           }
         ]

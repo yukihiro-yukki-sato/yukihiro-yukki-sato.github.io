@@ -8,6 +8,10 @@
         ],
         "components": [
           {
+            "/": "/*",
+            "exclude": true
+          },
+          {
             "/": "/mini_resell/*",
             "comment": "Launch post item from external belonging list"
           }

@@ -8,12 +8,14 @@
         ],
         "components": [
           {
-            "/": "/*",
-            "exclude": true
+            "/": "/mini_resell/resell",
+            "?": { "hash_id": "*" },
+            "comment": "Launch post item from external belonging list"
           },
           {
-            "/": "/mini_resell/*",
-            "comment": "Launch post item from external belonging list"
+            "/": "/*",
+            "exclude": true,
+            "comment": "Guard other URLs"
           }
         ]
       }

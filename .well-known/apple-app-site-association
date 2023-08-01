@@ -12,14 +12,6 @@
             "?": {
               "hash_id": ".*"
             }
-          },
-          {
-            "/": "/mini_resell/*",
-            "exclude": true
-          },
-          {
-            "/": "/*",
-            "exclude": true
           }
         ]
       }

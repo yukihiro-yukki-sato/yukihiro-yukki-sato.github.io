@@ -3,12 +3,12 @@
     "details": [
       {
         "appIDs": [
-            "87CT3T3CK2.jp.co.fablic.fril",
-            "A5QLVT6F9C.jp.co.fablic.fril.enterprise"
+            "87CT3T3CK2.jp.co.fablic.fril"
         ],
         "components": [
           {
-            "/": "/mini_resell/resell"
+            "/": "/mini_resell/resell",
+            "?": { "hash_id": "?*" }
           }
         ]
       }

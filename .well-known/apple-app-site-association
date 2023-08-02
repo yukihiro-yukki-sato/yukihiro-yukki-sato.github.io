@@ -8,10 +8,7 @@
         ],
         "components": [
           {
-            "/": "/mini_resell/resell",
-            "?": {
-              "hash_id": ".*"
-            }
+            "/": "/mini_resell/resell"
           }
         ]
       }

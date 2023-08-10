@@ -9,10 +9,7 @@
           {
             "/": "/mini_resell/resell",    // パス指定
             "?": { "hash_id": "?*" }    // クエリ指定
-          },
-          {
-            "/": "/mini_resell/launch"    // パス指定
-          }
+          }
         ]
       }
     ]

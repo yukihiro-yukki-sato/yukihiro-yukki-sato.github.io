@@ -7,12 +7,55 @@
         font-size: 32px;
         line-height: 200%;
       }
+      td { 
+        font-size: 24px;
+        text-align: left;
+      }
     </style>
+    <script type="text/javascript">
+    <!--
+      function submit() {
+        let domain = document.getElementById('domain');
+        let path = document.getElementById('path');
+        let hashId = document.getElementById('hash_id');
+        let lId = document.getElementById('l-id');
+        let scid = document.getElementById('scid');
+        var url = `https://${domain.value}${path.value}?hash_id=${hashId.value}&l-id=${lId.value}&scid=${scid.value}`
+        location.href = url
+      }
+    -->
+    </script>
   </head>
   <body>
     <div class="font-large">
       <h2>UniversalLinks test</h2>
       UniversalLinks検証用TestFlightでのみ確認可能<br/>
+      <table border="0">
+        <tr>
+          <td>URL</td>
+        </tr>
+        <tr>
+          <td>Domain</td><td><input id="domain" type="text" size="50" value="yukihiro-yukki-sato.github.io"></td>
+        </tr>
+        <tr>
+          <td>Path</td><td><input id="path" type="text" size="50" value="/mini_resell/resell"></td>
+        </tr>
+        <tr>
+          <td>Query<td>
+        </tr>
+        <tr>
+          <td>hash_id</td><td><input id="hash_id" type="text" size="100" value="ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662"></td>
+        </tr>
+        <tr>
+          <td>l-id</td><td><input id="l-id" type="text" size="50" value="testlid"></td>
+        </tr>
+        <tr>
+          <td>scid</td><td><input id="scid" type="text" size="50" value="testscid"></td>
+        </tr>
+      </table>
+      <input type="submit" value="Request" onclick="submit()"/>
+      <br/>
+      <br/>
       <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?hash_id=testtest&l-id=test">(必須条件に合致) /mini_resell/resell?hash_id=testtest&l-id=test</a><br/>
       <br/>
       市場持ち物リストの出品リンク(l-id/scid追加)<br/>

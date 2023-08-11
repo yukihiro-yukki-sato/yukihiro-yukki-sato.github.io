@@ -3,91 +3,144 @@
     <meta charset='utf-8'>
     <title>test page</title>
     <style type="text/css">
-      div {
-        font-size: 32px;
-        line-height: 200%;
+      h2 {
+        font-size: 20px;
       }
       td { 
         font-size: 24px;
         text-align: left;
       }
+      /* for textbox  */
+      .input_text {
+        position: relative;
+        width: 90%;
+        margin: 10px 3%;
+      }
+      .input_text input[type='text'] {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+      }
+      .textbox input[type='text']:focus {
+        border: 1px solid #da3c41;
+        outline: none;
+        box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+      }
+      .input_button input[type='submit'] {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 30%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+      }
+      #urls {
+        margin-top: 20px;
+      }
+      .links {
+        font-size: 20px;
+      }
+      #host_select {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 75%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+      .label {
+        font-size: 24px;
+      }
     </style>
     <script type="text/javascript">
     <!--
       function submit() {
-        let domain = document.getElementById('domain');
+        let host = document.getElementById('host_select');
         let path = document.getElementById('path');
         let hashId = document.getElementById('hash_id');
         let lId = document.getElementById('l-id');
         let scid = document.getElementById('scid');
-        var url = `https://${domain.value}${path.value}?hash_id=${hashId.value}&l-id=${lId.value}&scid=${scid.value}`
+        var url = `https://${host.value}${path.value}?hash_id=${hashId.value}&l-id=${lId.value}&scid=${scid.value}`
         location.href = url
       }
       function submitFullPath() {
         let fullPath = document.getElementById('full_path');
         location.href = fullPath.value
       }
+      function clickLink(text) {
+        let host = document.getElementById('host_select');
+        var url = `https://${host.value}${text}`
+        location.href = url
+      }
     -->
     </script>
   </head>
   <body>
-    <div class="font-large">
       <h2>UniversalLinks test</h2>
-      UniversalLinks検証用TestFlightでのみ確認可能<br/>
-      <br/>
-      <table border="0">
-        <tr><td>URL</td></tr>
-        <tr><td>Domain</td><td><input id="domain" type="text" size="50" value="yukihiro-yukki-sato.github.io"></td></tr>
-        <tr><td>Path</td><td><input id="path" type="text" size="50" value="/mini_resell/resell"></td></tr>
-        <tr><td>Query<td></tr>
-        <tr><td>hash_id</td><td><input id="hash_id" type="text" size="100" value="ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662"></td></tr>
-        <tr><td>l-id</td><td><input id="l-id" type="text" size="50" value="testlid"></td></tr>
-        <tr><td>scid</td><td><input id="scid" type="text" size="50" value="testscid"></td></tr>
-        <tr><td><input type="submit" value="Request" onclick="submit()"/></td></tr>
-      </table>
-      <br/>
-      <table border="0">
-        <tr><td>Full URL</td><td><input id="full_path" type="text" size="50" value="https://yukihiro-yukki-sato.github.io/mini_resell/resell?hash_id=testtest&l-id=test"></td></tr>
-        <tr><td><input type="submit" value="Request" onclick="submitFullPath()"/></td></tr>
-      </table>
-      <br/>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?hash_id=testtest&l-id=test">(必須条件に合致) /mini_resell/resell?hash_id=testtest&l-id=test</a><br/>
-      <br/>
-      市場持ち物リストの出品リンク(l-id/scid追加)<br/>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662&l-id=test">テレビスタンド(l-id追加)</a></br>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=099595973cc8de6b3b8407bec10affd6c1c7bc53fbb23192d5875a0597806c4be2e2abe9f322f7ab5d5301f8e010e0bb&scid=test">TOSHIBA(scid追加)</a></br>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=cc79c14ecb198f21c976efca014a8610f9d186715419e872f1e0767f3cf9863b&l-id=test&scid=testtest">EPレコードボックス(l-id/scid追加)</a></br>
-      
-      <h4>対象外URL</h4>
-      <a href="https://yukihiro-yukki-sato.github.io/">(パスなし) /</a><br/>
-      <a href="https://yukihiro-yukki-sato.github.io/app/">(対象外パス) /app/</a><br/>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell?hash_id=testtest">(対象外パス) /mini_resell?hash_id=testtest</a><br/>
-      <a href="https://yukihiro-yukki-sato.github.io/mini_resell/resell?test=true">(パラメータ不足) /mini_resell/resell?test=true</a><br/>
-      
-      <h4>対象外のドメイン</h4>
-      <a href="https://yukihill.github.io/">https://yukihill.github.io/</a><br/>
-      <br/>
-      
-      <h2>fril.jpドメイン</h2>
-      fril.jpドメインは本番リリース後に実行可能
-      <a href="https://fril.jp/mini_resell/resell?hash_id=testtest">(条件に合致) fril.jp /mini_resell/resell?hash_id=testtest</a><br/>
-      <br/>
-      市場持ち物リストの出品リンク<br/>
-      <a href="https://fril.jp/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662">fril.jp テレビスタンド</a></br>
-      <a href="https://fril.jp/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=099595973cc8de6b3b8407bec10affd6c1c7bc53fbb23192d5875a0597806c4be2e2abe9f322f7ab5d5301f8e010e0bb">fril.jp TOSHIBA</a></br>
-      <a href="https://fril.jp/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=cc79c14ecb198f21c976efca014a8610f9d186715419e872f1e0767f3cf9863b">fril.jp EPレコードボックス</a></br>
-      
-      <h4>対象外URL</h4>
-      <a href="https://fril.jp/">(パスなし) /</a><br/>
-      <a href="https://fril.jp/app/">(対象外パス) /app/</a><br/>
-      <a href="https://fril.jp/mini_resell?hash_id=testtest">(対象外パス) /mini_resell?hash_id=testtest</a><br/>
-      <a href="https://fril.jp/mini_resell/resell?test=true">(パラメータ不足) /mini_resell/resell?test=true</a><br/>
-      
-      <h2>Adjust(参考)</h2>
-      <a href="https://amsz.adj.st/banner/153291/?adjust_t=1ov8ipi&adjust_campaign=mail_20230802_mass&adjust_deeplink=fril%3A%2F%2Fbanner%2F153291&adjust_redirect=https%3A%2F%2Frakuma.rakuten.co.jp%2Finfo%2Fcampaign%2Fbuy%2Fkaimawari%2F%3Fscid%3Dfrom_rkm_mail%2F%3Futm_source%3Dautomail%26utm_medium%3Demail%26utm_campaign%3Dmailmagazine_20230804_mass%26utm_content%3D01">Adjust Campaign link(Production)</a><br/>
-      <!--<a href="https://hgkd.adj.st/balances?adjust_t=hb3uilc&adj_deeplink=fril%3A%2F%2Fbalances">https://hgkd.adj.st/balances?adjust_t=hb3uilc&adj_deeplink=fril%3A%2F%2Fbalances</a><br/>-->
-      <!--<a href="https://github.com/yukihiro-yukki-sato">https://github.com/yukihiro-yukki-sato</a><br/>-->
-      <br/>
-    </div>
+      <section class="selection">
+        <label for="host_select" class="label">Host</label>
+        <select name="host" id="host_select">
+          <option value="yukihiro-yukki-sato.github.io" selected>yukihiro-yukki-sato.github.io</option>
+          <option value="fril.jp">fril.jp</option>
+          <option value="www.rakuten.co.jp">www.rakuten.co.jp</option>
+        </select>
+      </section>
+
+      <section id="urls">
+        <table border="0">
+          <tr><td style="width: 11%;">URL</td><td></td></tr>
+          <tr>
+            <td>Path</td>
+            <td><div class="input_text"><label class="textbox"><input id="path" type="text" size="50" value="/mini_resell/resell"></label></div></td>
+          </tr>
+          <tr><td>Query<td></tr>
+          <tr>
+            <td>hash_id</td>
+            <td><div class="input_text"><label class="textbox"><input id="hash_id" type="text" size="100" value="ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662"></label></div></td>
+          </tr>
+          <tr>
+            <td>l-id</td>
+            <td><div class="input_text"><label class="textbox"><input id="l-id" type="text" size="50" value="testlid"></label></div></td>
+          </tr>
+          <tr>
+            <td>scid</td>
+            <td><div class="input_text"><label class="textbox"><input id="scid" type="text" size="50" value="testscid"></label></div></td>
+          </tr>
+        </table>
+        <div class="input_button"><input type="submit" value="Request" onclick="submit()"/></div><br/>
+        <table border="0">
+          <tr><td style="width: 11%;">Full URL</td><td><div class="input_text"><label class="textbox"><input id="full_path" type="text" size="50" value="https://yukihiro-yukki-sato.github.io/mini_resell/resell?hash_id=testtest&l-id=test"></label></div></td></tr>
+        </table>
+        <div class="input_button"><input type="submit" value="Request" onclick="submitFullPath()"/></div><br/>
+      </section>
+
+      <section class="links">
+        <a href="#" onclick="clickLink('/mini_resell/resell?hash_id=testtest'); return false;">(条件に合致) /mini_resell/resell?hash_id=testtest</a><br/>
+        <br/>
+        <h4>市場持ち物リストの出品リンク</h4>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662'); return false;">テレビスタンド</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=099595973cc8de6b3b8407bec10affd6c1c7bc53fbb23192d5875a0597806c4be2e2abe9f322f7ab5d5301f8e010e0bb'); return false;">TOSHIBA</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=cc79c14ecb198f21c976efca014a8610f9d186715419e872f1e0767f3cf9863b'); return false;">EPレコードボックス</a><br/>
+
+        <h4>対象外URL</h4>
+        <a href="#" onclick="clickLink('/'); return false;">(パスなし) /</a><br/>
+        <a href="#" onclick="clickLink('/app/'); return false;">(対象外パス) /app/</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell?hash_id=testtest'); return false;">(対象外パス) /mini_resell?hash_id=testtest</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?test=true'); return false;">(パラメータ不足) /mini_resell/resell?test=true</a><br/>
+      </section>
+
   </body>
 </html>

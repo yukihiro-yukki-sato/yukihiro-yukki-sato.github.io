@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>test page</title>
+    <style type="text/css">
+      * {
+        font-famly:sans-seif;
+      }
+      td { 
+        font-size: 24px;
+        text-align: left;
+      }
+      /* for textbox  */
+      .input_text {
+        position: relative;
+        width: 90%;
+        margin: 10px 3%;
+      }
+      .input_text input[type='text'] {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+      }
+      .textbox input[type='text']:focus {
+        border: 1px solid #da3c41;
+        outline: none;
+        box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+      }
+      .input_button input[type='submit'] {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 30%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+      }
+      #urls {
+        margin-top: 20px;
+      }
+      .links {
+        font-size: 20px;
+      }
+      #host_select {
+        font: 32px/32px sans-serif;
+        box-sizing: border-box;
+        width: 75%;
+        padding: 0.3em;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        color: #000000;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+      .label {
+        font-size: 24px;
+      }
+    </style>
+    <script type="text/javascript">
+    <!--
+      function submit() {
+        let host = document.getElementById('host_select');
+        let path = document.getElementById('path');
+        let hashId = document.getElementById('hash_id');
+        let lId = document.getElementById('l-id');
+        let scid = document.getElementById('scid');
+        var url = `https://${host.value}${path.value}?hash_id=${hashId.value}&l-id=${lId.value}&scid=${scid.value}`
+        location.href = url
+      }
+      function submitFullPath() {
+        let fullPath = document.getElementById('full_path');
+        location.href = fullPath.value
+      }
+      function clickLink(text) {
+        let host = document.getElementById('host_select');
+        var url = `https://${host.value}${text}`
+        location.href = url
+      }
+    -->
+    </script>
+  </head>
+  <body>
+      <h2>UniversalLinks test</h2>
+      <h3>接続先HOST</h3>
+      <section class="selection">
+        <label for="host_select" class="label">Host</label>
+        <select name="host" id="host_select">
+          <option value="yukihiro-yukki-sato.github.io" selected>yukihiro-yukki-sato.github.io</option>
+          <option value="fril.jp">fril.jp</option>
+          <option value="www.rakuten.co.jp">www.rakuten.co.jp</option>
+          <option value="yukihill.github.io">yukihill.github.io(test page)</option>
+        </select>
+      </section>
+
+      <section class="links">
+        <h3>Sample Links</h3>
+        <a href="#" onclick="clickLink('/mini_resell/resell?hash_id=testtest'); return false;">(条件に合致) /mini_resell/resell?hash_id=testtest</a><br/>
+        <br/>
+        <h4>市場持ち物リストの出品リンク</h4>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662'); return false;">テレビスタンド</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=099595973cc8de6b3b8407bec10affd6c1c7bc53fbb23192d5875a0597806c4be2e2abe9f322f7ab5d5301f8e010e0bb'); return false;">TOSHIBA</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?ichiba_app=true&utm_source=belonging_list_ichiba&utm_medium=app_link&utm_campaign=circulation&utm_content=belonging_list_ichiba_exhibit&hash_id=cc79c14ecb198f21c976efca014a8610f9d186715419e872f1e0767f3cf9863b'); return false;">EPレコードボックス</a><br/>
+
+        <h4>対象外URL</h4>
+        <a href="#" onclick="clickLink('/'); return false;">(パスなし) /</a><br/>
+        <a href="#" onclick="clickLink('/app/'); return false;">(対象外パス) /app/</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell?hash_id=testtest'); return false;">(対象外パス) /mini_resell?hash_id=testtest</a><br/>
+        <a href="#" onclick="clickLink('/mini_resell/resell?test=true'); return false;">(パラメータ不足) /mini_resell/resell?test=true</a><br/>
+      </section>
+
+      <section id="urls">
+        <h3>自由入力</h3>
+        <table border="0">
+          <tr><td style="width: 11%;">URL</td><td></td></tr>
+          <tr>
+            <td>Path</td>
+            <td><div class="input_text"><label class="textbox"><input id="path" type="text" size="50" value="/mini_resell/resell"></label></div></td>
+          </tr>
+          <tr><td>Query<td></tr>
+          <tr>
+            <td>hash_id</td>
+            <td><div class="input_text"><label class="textbox"><input id="hash_id" type="text" size="100" value="ed57282ed43616d2e79c1bd1156e45dadafd865a7e6479618aecb47c7ebe708bd710d9cb66b4660d903ad8b32bacc662"></label></div></td>
+          </tr>
+          <tr>
+            <td>l-id</td>
+            <td><div class="input_text"><label class="textbox"><input id="l-id" type="text" size="50" value="testlid"></label></div></td>
+          </tr>
+          <tr>
+            <td>scid</td>
+            <td><div class="input_text"><label class="textbox"><input id="scid" type="text" size="50" value="testscid"></label></div></td>
+          </tr>
+        </table>
+        <div class="input_button"><input type="submit" value="Request" onclick="submit()"/></div><br/>
+        <table border="0">
+          <tr><td style="width: 11%;">Full URL</td><td><div class="input_text"><label class="textbox"><input id="full_path" type="text" size="50" value="https://yukihiro-yukki-sato.github.io/mini_resell/resell?hash_id=testtest&l-id=test"></label></div></td></tr>
+        </table>
+        <div class="input_button"><input type="submit" value="Request" onclick="submitFullPath()"/></div><br/>
+      </section>
+      <section id="urls">
+        <h3>Others</h3>
+        Adjustリンク<br/>
+        <a href="https://amsz.adj.st/balances?adjust_t=p56xg1k&adj_deeplink=fril%3A%2F%2Fbalances">https://amsz.adj.st/balances?adjust_t=p56xg1k&adj_deeplink=fril%3A%2F%2Fbalances</a><br/>
+      </section>
+  </body>
+</html>

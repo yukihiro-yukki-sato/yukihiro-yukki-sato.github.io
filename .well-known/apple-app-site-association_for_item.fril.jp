@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "87CT3T3CK2.jp.co.fablic.fril"
+        ],
+        "components": [
+          {
+            "/": "/"
+          },
+          {
+            "/": "/amp/*"
+          }
+        ]
+      }
+    ]
+  }
+}

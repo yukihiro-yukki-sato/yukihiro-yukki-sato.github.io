@@ -7,13 +7,31 @@
         ],
         "components": [
           {
+            "/": "/"
+          },
+          {
+            "/": "/brand"
+          },
+          {
+            "/": "/category/*"
+          },
+          {
+            "/": "/mini_resell/launch"
+          },
+          {
             "/": "/mini_resell/resell",
             "?": {
               "hash_id": "?*"
             }
           },
           {
-            "/": "/mini_resell/launch"
+            "/": "/s",
+            "?": {
+              "query": "?*"
+            }
+          },
+          {
+            "/": "/search/*"
           }
         ]
       }

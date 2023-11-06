@@ -13,7 +13,7 @@
             "/": "/brand"
           },
           {
-            "/": "/category/*"
+            "/": "/category/?*"
           },
           {
             "/": "/mini_resell/launch"
@@ -31,7 +31,7 @@
             }
           },
           {
-            "/": "/search/*"
+            "/": "/search/?*"
           }
         ]
       }

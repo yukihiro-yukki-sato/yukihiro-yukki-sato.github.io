@@ -16,7 +16,7 @@
             "/": "/category/?*"
           },
           {
-            "/": "/category/?*/?*",
+            "/": "/category/*/*",
             "exclude": true
           },
           {

@@ -16,6 +16,10 @@
             "/": "/category/?*"
           },
           {
+            "/": "/category/?*/?*",
+            "exclude": true
+          },
+          {
             "/": "/mini_resell/launch"
           },
           {

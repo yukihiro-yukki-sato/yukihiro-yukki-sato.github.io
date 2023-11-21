@@ -13,11 +13,11 @@
             "/": "/brand"
           },
           {
-            "/": "/category/?*"
-          },
-          {
             "/": "/category/?*/amp",
             "exclude": true
+          },
+          {
+            "/": "/category/?*"
           },
           {
             "/": "/mini_resell/launch"

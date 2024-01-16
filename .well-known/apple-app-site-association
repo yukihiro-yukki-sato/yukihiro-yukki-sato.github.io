@@ -10,14 +10,28 @@
             "/": "/"
           },
           {
+            "/": "/amp/s"
+          },
+          {
+            "/": "/amp/search/?*"
+          },
+          {
             "/": "/brand"
           },
           {
-            "/": "/category/?*/amp",
-            "exclude": true
+            "/": "/brand/?*"
+          },
+          {
+            "/": "/brand/?*/amp"
+          },
+          {
+            "/": "/category"
           },
           {
             "/": "/category/?*"
+          },
+          {
+            "/": "/category/?*/amp"
           },
           {
             "/": "/mini_resell/launch"
